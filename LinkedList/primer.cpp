@@ -21,7 +21,9 @@ void printLL(Node<int> *head)
 {
     while (head != NULL)
     {
-        cout << head->data << "-->";
+        cout << head->data;
+        if (head->next != NULL)
+            cout << "-->";
         head = head->next;
     }
     cout << endl;
@@ -69,7 +71,9 @@ int main()
     insertAtHead(head, 4);
     insertAtHead(head, 3);
     insertAtHead(head, 2);
+    int n;
+    cin >> n;
     insertAtHead(head, 1);
-    insertInMiddle(head, 100, 3);
+    insertInMiddle(head, n, 3);
     printLL(head);
 }
