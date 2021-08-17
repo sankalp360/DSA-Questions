@@ -1,0 +1,1 @@
+{"name":"Local: balancedParanthesis","url":"c:\\Users\\LENOVO\\Desktop\\DSA-Questions\\Stack\\balancedParanthesis.cpp","tests":[{"id":1629166730819,"input":"(","output":"Not Balanced"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\LENOVO\\Desktop\\DSA-Questions\\Stack\\balancedParanthesis.cpp","group":"local","local":true}
