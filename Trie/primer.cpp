@@ -24,6 +24,10 @@ struct Node
     {
         flag = true;
     }
+    bool isFlagSet()
+    {
+        
+    }
 };
 
 Node *root = new Node();
@@ -53,7 +57,12 @@ bool search(string word)
         {
             temp = temp->getNext(word[i]);
         }
+        else
+        {
+            return false;
+        }
     }
+    return temp->isFlagSet();
 }
 
 signed main()
