@@ -1,20 +1,22 @@
-class Solution {
+class Solution
+{
 public:
-    int maxProfit(vector<int>& arr) {
-        int min_amt = arr[0];
-        int max_profit = 0;
-        for(int i=0; i<arr.size(); i++)
+    int maxProfit(vector<int> &prices)
+    {
+        int prof = 0;
+        int buy = INT_MAX;
+        int sell = 0;
+        for (int i = 0; i < prices.size(); i++)
         {
-            if(arr[i] < min_amt)
+            if (buy < prices[i])
             {
-                min_amt = arr[i];
+                buy = prices[i];
+                continue;
             }
-            if(arr[i] - min_amt > max_profit)
-            {
-                max_profit = arr[i] - min_amt;
-            }
-            
+            sell = prices[i];
+            prof = max(prof, sell - buy);
         }
-        return max_profit;
+
+        return prof;
     }
 };
