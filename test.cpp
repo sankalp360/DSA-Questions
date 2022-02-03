@@ -1,23 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main()
 {
-    int cnt=0;
-    string str;
-    cin >> str;
+    int n;
+    cin >> n;
 
-    char f;
-    cin >> f;
+    int k;
+    cin >> k;
+    vector<int> pup;
 
-    for(int i=0; i<str.size(); i++)
+    for (int i = 0; i < n; i++)
     {
-        if(str[i] == f)
-            cnt++;
+        int a;
+        cin >> a;
+        pup.push_back(a);
     }
-
+    int cnt = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (i + 1 == k)
+        {
+            continue;
+        }
+        else
+        {
+            cnt = cnt + pup[i] * abs((i + 1) - k);
+        }
+    }
     cout << cnt << endl;
-    
-    
 }

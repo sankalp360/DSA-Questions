@@ -24,9 +24,11 @@ struct Node
     {
         flag = true;
     }
-    bool isFlagSet()
+    bool isFlagSet(Node* node)
     {
-        
+        if(node->flag == true)
+            return true;
+        return false;
     }
 };
 
@@ -62,7 +64,7 @@ bool search(string word)
             return false;
         }
     }
-    return temp->isFlagSet();
+    return temp->isFlagSet(temp);
 }
 
 signed main()
